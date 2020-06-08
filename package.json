@@ -1,0 +1,26 @@
+{
+  "name": "vue-functional-accordion",
+  "version": "0.0.1",
+  "description": "A functional accordion component of Vue.js.",
+  "main": "src/index.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KaraMisoRamen/vue-functional-accordion.git"
+  },
+  "keywords": [
+    "vue",
+    "typescript",
+    "accordion",
+    "functional",
+    "functional-component"
+  ],
+  "author": "pei.fan",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/KaraMisoRamen/vue-functional-accordion/issues"
+  },
+  "homepage": "https://github.com/KaraMisoRamen/vue-functional-accordion#readme"
+}
