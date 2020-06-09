@@ -1,5 +1,4 @@
 export default {
-  name: 'functional-component',
   functional: true,
   props: {
     status: {
@@ -10,16 +9,16 @@ export default {
   render: function (h, context) {
     const data = {
       on: {
-        enter: function (el) {
+        enter: (el: ) => {
           console.log(el)
         },
-        afterEnter: function (el) {
+        afterEnter: (el) => {
           console.log(el)
         },
-        leave: (el) {
+        leave: (el) => {
           console.log(el)
         },
-        afterLeave: (el) {
+        afterLeave: (el) => {
           console.log(el)
         }
       },
@@ -27,7 +26,7 @@ export default {
 
     return (
       <transition {...data}>
-        {context.props.status && <div>{context.children}</div>}
+        {context.props.status && <div style="overflow: hidden;">{context.children}</div>}
       </transition>
     )
   },
