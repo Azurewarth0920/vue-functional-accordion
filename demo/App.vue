@@ -1,17 +1,17 @@
 <template>
   <div>
     <button @click="status = !status">change status</button>
-    <Accrodion :status="status">
+    <AccrodionComponent :status="status">
       <h1>Hello world</h1>
-    </Accrodion>
+    </AccrodionComponent>
   </div>
 </template>
 
 <script>
-  import Accrodion from '../src/index.tsx'
+  import AccrodionComponent from '../src/index.tsx'
   export default {
     components: {
-      Accrodion,
+      AccrodionComponent,
     },
     data() {
       return {
