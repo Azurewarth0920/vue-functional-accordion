@@ -40,7 +40,7 @@ export default Vue.extend({
             elementStyle.height = '0px'
           })
         },
-        onAfterLeave (el) {
+        onAfterLeave (el: HTMLElement) {
           const elementStyle = el.style
           elementStyle.overflow = elementStyle.height = elementStyle.transition = ''
         }

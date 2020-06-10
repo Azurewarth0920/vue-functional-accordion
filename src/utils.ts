@@ -1,4 +1,9 @@
-export function nextFrame(cb): void {
-  if (window === undefined) return
-  requestAnimationFrame ? requestAnimationFrame(cb) : setTimeout(() => cb(), 0)
+const raf =
+  typeof window !== undefined && window.requestAnimationFrame
+    ? window.requestAnimationFrame.bind(window)
+    : (fn: Function) => {
+        setTimeout(fn, 0)
+      }
+export function nextFrame(fn: Function) {
+  raf(() => raf(fn))
 }
