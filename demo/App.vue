@@ -8,15 +8,15 @@
 </template>
 
 <script>
-  import AccrodionComponent from '../src/index.tsx'
-  export default {
-    components: {
-      AccrodionComponent,
-    },
-    data() {
-      return {
-        status: false,
-      }
-    },
+import AccrodionComponent from '../src/index.tsx'
+export default {
+  components: {
+    AccrodionComponent
+  },
+  data() {
+    return {
+      status: false
+    }
   }
+}
 </script>

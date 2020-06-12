@@ -8,9 +8,13 @@ export default Vue.extend({
       type: Boolean,
       required: true,
     },
-    accrodionTransitionProperty: {
+    duration: {
       type: String,
-      default: 'height 0.3s cubic-bezier(0.44, 0.03, 0.14, 0.98)'
+      default: '0.5s'
+    },
+    timingFunction: {
+      type: String,
+      default: 'cubic-bezier(0.44, 0.03, 0.14, 0.98)'
     },
   },
   render: function (h, context) {
@@ -21,28 +25,32 @@ export default Vue.extend({
           const elementHeight = el.scrollHeight
           elementStyle.overflow = 'hidden'
           elementStyle.height = '0'
-          elementStyle.transition = context.props.accrodionTransitionProperty
+          elementStyle.transitionProperty = 'height'
+          elementStyle.transitionDuration = context.props.duration
+          elementStyle.transitionTimingFunction = context.props.timingFunction
           nextFrame(() => {
             elementStyle.height = elementHeight + 'px'
           })
         },
         afterEnter: (el: HTMLElement) => {
           const elementStyle = el.style
-          elementStyle.overflow = elementStyle.height = elementStyle.transition = ''
+          elementStyle.overflow = elementStyle.height = elementStyle.transitionProperty = elementStyle.transitionDuration = elementStyle.transitionTimingFunction = context.props.timingFunction = ''
         },
         leave: (el: HTMLElement) => {
           const elementStyle = el.style
           const elementHeight = el.scrollHeight
           elementStyle.overflow = 'hidden'
           elementStyle.height = elementHeight + 'px'
-          elementStyle.transition = context.props.accrodionTransitionProperty
+          elementStyle.transitionProperty = 'height'
+          elementStyle.transitionDuration = context.props.duration
+          elementStyle.transitionTimingFunction = context.props.timingFunction
           nextFrame(() => {
             elementStyle.height = '0px'
           })
         },
         onAfterLeave (el: HTMLElement) {
           const elementStyle = el.style
-          elementStyle.overflow = elementStyle.height = elementStyle.transition = ''
+          elementStyle.overflow = elementStyle.height = elementStyle.transitionProperty = elementStyle.transitionDuration = elementStyle.transitionTimingFunction = context.props.timingFunction = ''
         }
       },
     }
