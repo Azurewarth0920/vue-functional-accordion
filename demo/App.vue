@@ -2,7 +2,13 @@
   <div>
     <button @click="status = !status">change status</button>
     <AppAccordion :status="status">
-      <h1>Hello world</h1>
+      <section>
+        <h1>Title</h1>
+        <p>Contents.</p>
+        <p>Contents.</p>
+        <p>Contents.</p>
+        <p>Contents.</p>
+      </section>
     </AppAccordion>
   </div>
 </template>

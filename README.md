@@ -2,6 +2,15 @@
 
 A functional accordion component of Vue.js.
 
+## demo
+
+```
+npm install
+# then
+npm run dev
+# then you can check the demo at localhost:1234 (if port 1234 is available).
+```
+
 ## installation
 
 ```
