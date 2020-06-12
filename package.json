@@ -4,7 +4,6 @@
   "description": "A functional accordion component of Vue.js.",
   "main": "dist/index.cjs.js",
   "module": "dist/index.esm.js",
-  "umd:main": "dist/vue-functional-accordion.min.js",
   "scripts": {
     "dev": "parcel demo/index.html",
     "clean": "rm -rf dist",
